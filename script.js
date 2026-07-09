@@ -1,127 +1,6 @@
 
     // ===== ДАННЫЕ НОВОСТЕЙ =====
-    const NEWS_DATA = [
-      {
-        title: "Открытие нового кабинета физиотерапии",
-        date: "10.05.2026",
-        icon: "🏥",
-        gradient: "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)",
-        body: `
-          <p>Рады сообщить нашим пациентам об открытии современного кабинета физиотерапевтических процедур! Новое оборудование позволяет проводить широкий спектр процедур для детей всех возрастов — от грудничков до подростков.</p>
-          <p>В кабинете установлены современные аппараты для электротерапии, магнитотерапии, лазерной терапии и парафинолечения. Все процедуры проводятся под контролем опытных специалистов с медицинским образованием.</p>
-          <p>Физиотерапия является важным компонентом комплексного лечения многих детских заболеваний, включая неврологические расстройства, ортопедические патологии и респираторные заболевания. Записаться на процедуры можно через регистратуру или по телефону.</p>
-          <p>В честь открытия действует специальная скидка 15% на весь комплекс физиотерапевтических процедур в течение первого месяца работы кабинета. Будем рады видеть вас!</p>
-        `
-      },
-      {
-        title: "Новые методики лечения сколиоза у детей",
-        date: "02.05.2026",
-        icon: "🩺",
-        gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
-        body: `
-          <p>Мы внедрили инновационные методики коррекции сколиоза, основанные на современных международных протоколах лечения. Новый подход включает комплекс упражнений по методике Schroth, аппаратную терапию и индивидуальные программы коррекции осанки.</p>
-          <p>Сколиоз — одно из самых распространённых заболеваний опорно-двигательного аппарата у детей. При своевременном выявлении и правильном лечении возможно полностью остановить прогрессирование заболевания и добиться значительного улучшения.</p>
-          <p>Наш хирург-ортопед Волков А.П. прошёл специализированное обучение в Германии и сертифицирован для применения новых методик. Консультация включает компьютерный анализ осанки и составление индивидуальной программы лечения.</p>
-          <p>Приглашаем на профилактические осмотры всех детей, особенно тех, кто проводит много времени за компьютером и имеет нарушения осанки. Раннее выявление — залог успешного лечения.</p>
-        `
-      },
-      {
-        title: "Бесплатные консультации психолога в мае",
-        date: "28.04.2026",
-        icon: "💬",
-        gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
-        body: `
-          <p>Весь май наш центр проводит акцию — бесплатные первичные консультации детского психолога! Это прекрасная возможность получить профессиональную помощь и оценить психоэмоциональное развитие вашего ребёнка.</p>
-          <p>Акция распространяется на детей от 3 до 12 лет. В рамках консультации психолог проводит диагностическую беседу, оценивает особенности поведения и эмоциональной сферы ребёнка, даёт рекомендации родителям.</p>
-          <p>Наш психолог Громова Е.М. специализируется на работе с детьми, имеющими тревожность, проблемы адаптации в детском саду и школе, а также поведенческие трудности. Также проводится консультация по вопросам РАС.</p>
-          <p>Количество мест ограничено — запишитесь заранее через наш сайт или по телефону +7 (800) 301-48-54. Помните, что раннее выявление психологических трудностей позволяет добиться максимальных результатов в коррекции!</p>
-        `
-      },
-      {
-        title: "Мастер-класс по детскому массажу",
-        date: "15.04.2026",
-        icon: "👐",
-        gradient: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)",
-        body: `
-          <p>Приглашаем родителей и будущих мам на бесплатный мастер-класс по детскому массажу! Вы научитесь базовым техникам расслабляющего и оздоровительного массажа, которые можно безопасно применять дома.</p>
-          <p>Мастер-класс проведёт наш сертифицированный массажист с 15-летним опытом работы с детьми. Программа включает обучение техникам общего массажа для младенцев, расслабляющему массажу для детей постарше, а также специальным приёмам при повышенном мышечном тонусе.</p>
-          <p>Детский массаж не только укрепляет физическое здоровье, но и способствует эмоциональному развитию, создаёт глубокую связь между родителем и ребёнком. Регулярный массаж улучшает сон, аппетит и общее самочувствие малыша.</p>
-          <p>Мастер-класс состоится 25 апреля в 11:00 в конференц-зале центра. Количество участников ограничено — обязательная предварительная запись по телефону или через форму на сайте.</p>
-        `
-      },
-      {
-        title: "Новое оборудование для УЗИ-диагностики",
-        date: "05.04.2026",
-        icon: "🔬",
-        gradient: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)",
-        body: `
-          <p>В нашем центре установлен современный аппарат ультразвуковой диагностики экспертного класса! Новое оборудование обеспечивает максимально точную визуализацию всех органов и систем организма ребёнка.</p>
-          <p>Аппарат позволяет проводить все виды УЗИ-исследований для детей: нейросонография (УЗИ головного мозга), УЗИ органов брюшной полости, почек и мочевыводящих путей, щитовидной железы, суставов и сердца. Высокое разрешение изображения позволяет выявлять даже минимальные отклонения.</p>
-          <p>УЗИ-диагностика проводится нашими специалистами с многолетним опытом работы. Все исследования выполняются с соблюдением современных протоколов и стандартов качества. Результаты выдаются сразу после процедуры.</p>
-          <p>Ультразвуковое исследование — безопасный и информативный метод диагностики, не имеющий противопоказаний и возрастных ограничений. Записаться на УЗИ можно по телефону или через онлайн-форму.</p>
-        `
-      },
-      {
-        title: "Групповые занятия по йоге для беременных",
-        date: "28.03.2026",
-        icon: "🧘",
-        gradient: "linear-gradient(135deg, #d299c2 0%, #fef9d7 100%)",
-        body: `
-          <p>Открываем набор в новую группу йоги для будущих мам! Занятия проводит сертифицированный инструктор с медицинским образованием, специализирующийся на йоге для беременных.</p>
-          <p>Йога для беременных — это бережный способ поддержать физическую форму, подготовить тело к родам и настроиться на позитивный опыт материнства. Занятия включают дыхательные техники, которые пригодятся во время родов, а также упражнения для укрепления мышц тазового дна и спины.</p>
-          <p>Занятия проходят в специально оборудованном зале с комфортной температурой и вентиляцией. Мы предоставляем все необходимое — от ковриков до подушек для поддержки. Группы формируются не более 8 человек для индивидуального подхода.</p>
-          <p>Занятия проходят по вторникам и четвергам в 18:00. Стоимость абонемента на 8 занятий — 3200 рублей. Первая пробная тренировка бесплатно! Запись по телефону +7 (800) 301-48-54.</p>
-        `
-      },
-      {
-        title: "Специальное предложение на комплексное обследование",
-        date: "20.03.2026",
-        icon: "🎯",
-        gradient: "linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%)",
-        body: `
-          <p>До конца апреля действует специальное предложение — скидка 20% на комплексное обследование ребёнка! Пакет включает консультацию педиатра, общий анализ крови, анализ мочи, УЗИ органов брюшной полости и консультацию специалиста по показаниям.</p>
-          <p>Комплексное обследование позволяет получить полную картину состояния здоровья ребёнка и выявить возможные проблемы на ранней стадии. Особенно рекомендуется детям, готовящимся к поступлению в детский сад или школу, а также при частых простудных заболеваниях.</p>
-          <p>Обследование проводится в комфортных условиях с учётом возрастных особенностей ребёнка. Все процедуры выполняются в течение одного визита, что экономит время родителей. По результатам выдаётся подробное заключение с рекомендациями.</p>
-          <p>Для записи на комплексное обследование позвоните нам или воспользуйтесь онлайн-формой. Акция не суммируется с другими предложениями.</p>
-        `
-      },
-      {
-        title: "Весенняя акция: профилактический осмотр",
-        date: "10.03.2026",
-        icon: "🌸",
-        gradient: "linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)",
-        body: `
-          <p>Встречайте весну здоровыми! Проведите весенний профилактический осмотр вашего ребёнка по специальной цене. Акция включает полный осмотр педиатра, измерение антропометрических данных, оценку физического развития и консультацию специалистов.</p>
-          <p>Весенний период — идеальное время для профилактического осмотра перед летним сезоном и новым учебным годом. Осмотр позволяет оценить общее состояние здоровья, выявить возможные дефициты витаминов и микроэлементов, а также определить план профилактических мероприятий.</p>
-          <p>В рамках акции также доступно консультирование по вопросам иммунизации, витаминной поддержки и подготовки к летнему сезону. Наши специалисты дадут персональные рекомендации по питанию и режиму дня для вашего ребёнка.</p>
-          <p>Акция действует с 10 марта по 30 апреля. Запишитесь на приём по телефону или через наш сайт. Будьте уверены в здоровье ваших детей!</p>
-        `
-      },
-      {
-        title: "Семинар для родителей о детском питании",
-        date: "01.03.2026",
-        icon: "🍎",
-        gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-        body: `
-          <p>Приглашаем всех родителей на бесплатный семинар «Правильное питание детей от 1 года»! Семинар проведёт детский диетолог с большим опытом работы. Вы узнаете, как составить сбалансированный рацион, какие продукты выбирать и как приучить ребёнка к правильному питанию.</p>
-          <p>Программа семинара включает обсуждение возрастных потребностей в питании, принципов составления меню, особенностей питания при различных состояниях здоровья, а также практические советы по организации здорового питания в семье. Будет уделено внимание профилактике аллергии и пищевых расстройств.</p>
-          <p>Все участники получат раздаточные материалы с рекомендациями, образцами меню и списками полезных продуктов. Будет организовано чаепитие и возможность задать вопросы специалисту в неформальной обстановке.</p>
-          <p>Семинар состоится 15 марта в 11:00 в конференц-зале центра. Вход свободный при обязательной предварительной регистрации. Запись по телефону +7 (800) 301-48-54.</p>
-        `
-      },
-      {
-        title: "Обновление игровой зоны для детей",
-        date: "20.02.2026",
-        icon: "🎈",
-        gradient: "linear-gradient(135deg, #feca57 0%, #ff9ff3 100%)",
-        body: `
-          <p>Мы полностью обновили детскую игровую зону в нашем центре! Теперь маленькие пациенты могут весело и с пользой провести время в ожидании приёма или после процедур. Новая зона оборудована с учётом рекомендаций детских психологов и развивающих специалистов.</p>
-          <p>В обновлённой зоне появились: развивающие игрушки для малышей, конструкторы и настольные игры для детей постарше, зона творчества с мольбертом и художественными материалами, а также уютный уголок для чтения с детской библиотекой. Все материалы и игрушки изготовлены из безопасных, сертифицированных материалов.</p>
-          <p>Особое внимание уделено созданию комфортной атмосферы, снижающей тревожность детей перед посещением врача. Мягкие цвета, приятное освещение и продуманная планировка помогают ребёнку чувствовать себя как дома.</p>
-          <p>Игровая зона доступна для всех маленьких посетителей центра бесплатно. Приходите на приём пораньше, чтобы ваш ребёнок успел поиграть и настроиться на позитивный лад!</p>
-        `
-      }
-    ];
+    const NEWS_DATA = [];
 
     // ===== ДАННЫЕ ВРАЧЕЙ =====
     const DOCTOR_DATA = {
@@ -450,7 +329,7 @@ const BOT_RESPONSES = {
   // 1. Педиатр
   pediatr: {
     keywords: ['педиатр', 'педиатра', 'педиатру', 'педиатрический', 'педиатрия',
-               'андрианова', 'андриановой', 'дворецкова', 'дворецковой', 'карпенко',
+               'ткаченко', 'коровина', 'денисова', 'юшкова',
                'детский врач', 'детский доктор', 'осмотр', 'профилактика', 'прививки',
                'питание', 'прикорм', 'вскармливание', 'грудное'],
     response: `👩‍⚕️ Педиатр
@@ -463,9 +342,10 @@ const BOT_RESPONSES = {
 • Консультации по развитию
 
 Ведут приём:
-• Андрианова Е.В. — педиатр, детский гинеколог
-• Дворецкова В.В. — педиатр, гепатолог
-• Карпенко А.А. — педиатр, инфекционист
+• Ткаченко Е.А. — педиатр
+• Коровина Е.Ю. — педиатр
+• Денисова А.Д. — педиатр, врач-эндокринолог
+• Юшкова А.Г. — педиатр
 
 <a href="https://booking.medflex.ru/?user=9d07f51dcdac17646e01a3bdfc52a159" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться к педиатру</a>`
   },
@@ -473,7 +353,7 @@ const BOT_RESPONSES = {
   // 2. Невролог
   nevrolog: {
     keywords: ['невролог', 'невролога', 'неврологу', 'неврологический', 'неврология',
-               'подберезная', 'подберезной', 'нервная система', 'головная боль', 'судороги',
+               'нервная система', 'головная боль', 'судороги',
                'эпилепсия', 'дцп', 'задержка развития', 'гипертонус', 'гипотонус'],
     response: `🧠 Невролог
 
@@ -485,15 +365,13 @@ const BOT_RESPONSES = {
 • Гипертонус/гипотонус мышц
 • Нарушения сна и поведения
 
-Ведёт приём: Подберезная О.С. — детский невролог
-
 <a href="https://booking.medflex.ru/?user=9d07f51dcdac17646e01a3bdfc52a159" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться к неврологу</a>`
   },
 
   // 3. Хирург-ортопед
   hirurg: {
     keywords: ['хирург', 'хирурга', 'хирургу', 'хирургический', 'ортопед', 'ортопеда', 'ортопеду',
-               'ортопедический', 'волков', 'волкова', 'сколиоз', 'плоскостопие', 'валгус', 'варус',
+               'ортопедический', 'сколиоз', 'плоскостопие', 'валгус', 'варус',
                'врд', 'стопы', 'свод стопы', 'ортопедические стельки', 'стельки', 'осанка'],
     response: `🦴 Хирург-ортопед
 
@@ -504,8 +382,6 @@ const BOT_RESPONSES = {
 • Подбор ортопедических стелек
 • Массаж и ЛФК
 • УЗИ тазобедренных суставов
-
-Ведёт приём: Волков А.П. — детский хирург-ортопед
 
 <a href="https://booking.medflex.ru/?user=9d07f51dcdac17646e01a3bdfc52a159" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться к ортопеду</a>`
   },
@@ -525,15 +401,13 @@ const BOT_RESPONSES = {
 • Нарушения звукопроизношения
 • Логопедический массаж
 
-Консультация — от 2000 руб.
-
 <a href="https://booking.medflex.ru/?user=9d07f51dcdac17646e01a3bdfc52a159" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться к логопеду</a>`
   },
 
   // 5. Психолог
   psiholog: {
     keywords: ['психолог', 'психолога', 'психологу', 'психологический', 'психология', 'психологи',
-               'громова', 'громовой', 'адаптация', 'тревожность', 'страх', 'рас', 'аутизм', 'сдвг',
+               'блюм', 'адаптация', 'тревожность', 'страх', 'рас', 'аутизм', 'сдвг',
                'гиперактивность', 'поведение', 'эмоции', 'психологическая помощь', 'психологическая поддержка'],
     response: `🧠 Психолог
 
@@ -545,9 +419,7 @@ const BOT_RESPONSES = {
 • Проблемы поведения и общения
 • Психологическая поддержка родителей
 
-Ведёт приём: Громова Е.М. — психолог, нейропсихолог
-
-Консультация — от 2500 руб.
+Ведёт приём: Блюм А.И. — клинический психолог
 
 <a href="https://booking.medflex.ru/?user=9d07f51dcdac17646e01a3bdfc52a159" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться к психологу</a>`
   },
@@ -555,8 +427,7 @@ const BOT_RESPONSES = {
   // 6. Гинеколог
   ginekolog: {
     keywords: ['гинеколог', 'гинеколога', 'гинекологу', 'гинекологический', 'гинекология',
-               'андрианова', 'андриановой', 'микитенко', 'микитенко', 'детский гинеколог',
-               'девочка', 'детская гинекология', 'мальчик', 'уролог', 'взрослый гинеколог'],
+               'детский гинеколог', 'девочка', 'детская гинекология', 'мальчик', 'уролог', 'взрослый гинеколог'],
     response: `👩‍⚕️ Гинеколог
 
 В нашем центре ведут приём детский и взрослый гинекологи:
@@ -565,17 +436,13 @@ const BOT_RESPONSES = {
 • Диагностика и лечение гинекологических заболеваний
 • Подростковая гинекология
 
-Ведут приём:
-• Андрианова Е.В. — педиатр, детский гинеколог
-• Микитенко Н.Н. — детский и взрослый гинеколог
-
 <a href="https://booking.medflex.ru/?user=9d07f51dcdac17646e01a3bdfc52a159" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться к гинекологу</a>`
   },
 
   // 7. Эндокринолог
   endokrinolog: {
     keywords: ['эндокринолог', 'эндокринолога', 'эндокринологу', 'эндокринология',
-               'приходько', 'приходько', 'щитовидная', 'диабет', 'сахарный диабет',
+               'денисова', 'щитовидная', 'диабет', 'сахарный диабет',
                'гормоны', 'гормональные', 'тиреоидит', 'зоб'],
     response: `🩺 Эндокринолог
 
@@ -586,7 +453,7 @@ const BOT_RESPONSES = {
 • Задержка полового развития
 • Нарушения роста
 
-Ведёт приём: Приходько Е.Н. — взрослый эндокринолог
+Ведёт приём: Денисова А.Д. — педиатр, врач-эндокринолог
 
 <a href="https://booking.medflex.ru/?user=9d07f51dcdac17646e01a3bdfc52a159" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться к эндокринологу</a>`
   },
@@ -594,7 +461,7 @@ const BOT_RESPONSES = {
   // 8. Нейропсихолог
   neiropsiholog: {
     keywords: ['нейропсихолог', 'нейропсихолога', 'нейропсихологу', 'нейропсихология',
-               'громова', 'громовой', 'когнитивное', 'когнитивное развитие', 'память', 'внимание',
+               'блюм', 'когнитивное', 'когнитивное развитие', 'память', 'внимание',
                'мышление', 'обучение', 'коррекция', 'сдвг', 'аутизм', 'рас'],
     response: `🧩 Нейропсихолог
 
@@ -606,9 +473,7 @@ const BOT_RESPONSES = {
 • Проблемы с обучением
 • Подготовка к школе
 
-Ведёт приём: Громова Е.М. — психолог, нейропсихолог
-
-Консультация — от 2500 руб.
+Ведёт приём: Блюм А.И. — клинический психолог
 
 <a href="https://booking.medflex.ru/?user=9d07f51dcdac17646e01a3bdfc52a159" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться к нейропсихологу</a>`
   },
@@ -621,7 +486,7 @@ const BOT_RESPONSES = {
     response: `💆 Массаж
 
 В нашем центре проводятся:
-• Лечебный массаж — от 1000 руб.
+• Лечебный массаж
 • Профилактический массаж для детей
 • Массаж при плоскостопии, сколиозе
 • Массаж для младенцев и детей любого возраста
@@ -649,8 +514,6 @@ const BOT_RESPONSES = {
 • Гипертонус/гипотонус мышц
 • Нарушения походки
 
-Стоимость — от 1500 руб.
-
 <a href="https://booking.medflex.ru/?user=9d07f51dcdac17646e01a3bdfc52a159" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться на Войта-терапию</a>`
   },
 
@@ -667,8 +530,6 @@ const BOT_RESPONSES = {
 • Задержка моторного развития
 • Гипертонус/гипотонус мышц
 • Нарушения походки и равновесия
-
-Стоимость — от 1500 руб.
 
 <a href="https://booking.medflex.ru/?user=9d07f51dcdac17646e01a3bdfc52a159" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться на Бобат-терапию</a>`
   },
@@ -688,8 +549,6 @@ const BOT_RESPONSES = {
 • СДВГ (гиперактивность)
 • Нарушения равновесия и координации
 
-Стоимость — от 2000 руб.
-
 <a href="https://booking.medflex.ru/?user=9d07f51dcdac17646e01a3bdfc52a159" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться на иппотерапию</a>`
   },
 
@@ -708,7 +567,9 @@ const BOT_RESPONSES = {
 • УЗИ сердца (эхоКГ)
 • УЗИ щитовидной железы
 
-Стоимость — от 1500 руб.
+Ведут приём:
+• Петровская Н.Ю. — детский врач УЗИ
+• Казанова М.В. — врач УЗИ
 
 <a href="https://booking.medflex.ru/?user=9d07f51dcdac17646e01a3bdfc52a159" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться на УЗИ</a>`
   },
@@ -746,25 +607,25 @@ const BOT_RESPONSES = {
 • Профилактические осмотры
 • Направления к узким специалистам
 
-Первичный приём — от 2000 руб.
-
 <a href="https://booking.medflex.ru/?user=9d07f51dcdac17646e01a3bdfc52a159" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться к терапевту</a>`
   },
 
   // 16. Врачи (общий запрос)
   doctors: {
     keywords: ['врач', 'доктор', 'специалист', 'врачи', 'доктора', 'какие специалисты',
-               'кто принимает', 'кто врач', 'фамилии', 'дворецкова', 'карпенко', 'приходько', 'подберезная', 'микитенко'],
+               'кто принимает', 'кто врач', 'фамилии'],
     response: `👨‍⚕️ Наши специалисты
 
-• Андрианова Е.В. — Педиатр, детский гинеколог
-• Волков А.П. — Детский хирург-ортопед
-• Громова Е.М. — Психолог, нейропсихолог
-• Дворецкова В.В. — Педиатр, гепатолог
-• Карпенко А.А. — Педиатр, инфекционист
-• Приходько Е.Н. — Взрослый эндокринолог
-• Подберезная О.С. — Детский невролог
-• Микитенко Н.Н. — Детский и взрослый гинеколог
+• Ткаченко Е.А. — Педиатр
+• Петровская Н.Ю. — Детский врач УЗИ
+• Каплина К.Р. — Неонатолог, физиотерапевт
+• Мартынова О.И. — Детский психиатр, психиатр
+• Блюм А.И. — Клинический психолог
+• Казанова М.В. — Врач УЗИ
+• Коровина Е.Ю. — Педиатр
+• Денисова А.Д. — Педиатр, врач-эндокринолог
+• Юшкова А.Г. — Педиатр
+• Араева Е.М. — Специалист по грудному вскармливанию
 
 К какому врачу вам надо? Просто напишите его специальность или фамилию!`
   },
@@ -777,7 +638,7 @@ const BOT_RESPONSES = {
     response: `📍 Мы находимся по адресу:
 г. Курск, ул. Л. Толстого, д. 21, пом III
 
-📞 Телефон: +7 (800) 301-48-54
+📞 Телефон: +7 (4712) 36-00-61
 🕐 Режим работы: ежедневно с 9:00 до 21:00
 
 <a href="https://yandex.ru/maps/?text=г.+Курск,+ул.+Л.+Толстого,+д.+21" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #A8D5A2);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📍 Мы на карте</a>`
@@ -791,7 +652,8 @@ const BOT_RESPONSES = {
                'telegram', 'vk', 'вконтакте', 'instagram', 'инстаграм'],
     response: `📞 Наши контакты
 
-Телефон: +7 (800) 301-48-54 (бесплатно для РФ)
+Телефон: +7 (4712) 36-00-61
+Дополнительный: +7 962 380-90-25
 Режим работы: ежедневно с 9:00 до 21:00
 Адрес: г. Курск, ул. Л. Толстого, д. 21, пом III
 
@@ -807,7 +669,7 @@ const BOT_RESPONSES = {
 
 Записаться можно несколькими способами:
 • Онлайн: через форму на сайте (кнопка «Записаться»)
-• По телефону: +7 (800) 301-48-54
+• По телефону: +7 (4712) 36-00-61 или +7 962 380-90-25
 • Через чат-бот — напишите, к какому специалисту хотите записаться
 
 Работаем ежедневно с 9:00 до 21:00.
@@ -941,12 +803,9 @@ const BOT_RESPONSES = {
                'спасибо большое', 'благодарю вас', 'всего доброго', 'удачи'],
     response: `Всегда рад помочь! 🌸 Будьте здоровы!
 Если останутся вопросы — обращайтесь.
-Записаться на приём можно по телефону +7 (800) 301-48-54 или через кнопку «Записаться» на сайте.`
+Записаться на приём можно по телефону +7 (4712) 36-00-61 или +7 962 380-90-25, а также через кнопку «Записаться» на сайте.`
   }
 };
-
-
-// ====== Ответ по умолчанию ======
 const DEFAULT_RESPONSE = `Извините, я не совсем понял вопрос. Вот что я могу рассказать:
 — Направления и услуги центра
 — Наши специалисты
@@ -958,7 +817,6 @@ const DEFAULT_RESPONSE = `Извините, я не совсем понял во
 // ====== Функция определения категории запроса ======
 function detectCategory(userMessage) {
   const lowerMsg = userMessage.toLowerCase();
-
   for (const [category, data] of Object.entries(BOT_RESPONSES)) {
     for (const keyword of data.keywords) {
       if (lowerMsg.includes(keyword)) {
@@ -988,292 +846,13 @@ function getBotResponse(userMessage) {
   return addBookingButton(DEFAULT_RESPONSE, 'default');
 }
 
-// ====== Функция для множественных категорий (если в сообщении несколько тем) ======
-function getMultiResponse(userMessage) {
-  const lowerMsg = userMessage.toLowerCase();
-  const matchedCategories = [];
-
-  for (const [category, data] of Object.entries(BOT_RESPONSES)) {
-    for (const keyword of data.keywords) {
-      if (lowerMsg.includes(keyword)) {
-        matchedCategories.push(data.response);
-        break;
-      }
-    }
-  }
-
-  if (matchedCategories.length === 0) return DEFAULT_RESPONSE;
-  if (matchedCategories.length === 1) return matchedCategories[0];
-
-  // Если найдено несколько категорий — объединяем
-  return matchedCategories.join('\n\n---\n\n');
-}
-
-// ====== Форматирование времени ======
+// ====== Функция форматирования времени ======
 function formatTime(date) {
   return date.toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit' });
 }
 
-// ====== CSS для чат-бота ======
-const botStyles = `
-<style>
-  /* === Chat Bot === */
-  .chat-bot-icon {
-    position: fixed;
-    bottom: 110px;
-    right: 30px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #4A86C1, #f06292);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 4px 20px rgba(74, 134, 193, 0.4);
-    transition: transform 0.3s ease, opacity 0.5s ease;
-    z-index: 9999;
-    font-size: 28px;
-    opacity: 0;
-    pointer-events: none;
-  }
-  .chat-bot-icon.visible {
-    opacity: 1;
-    pointer-events: all;
-  }
-  .chat-bot-tooltip {
-    position: fixed;
-    bottom: 180px;
-    right: 30px;
-    background: var(--accent, #D8457A);
-    color: white;
-    padding: 10px 18px;
-    border-radius: 15px;
-    font-size: 14px;
-    font-weight: 700;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-    z-index: 9999;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: all 0.4s ease;
-    pointer-events: none;
-    white-space: nowrap;
-  }
-  .chat-bot-tooltip::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    right: 20px;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-top: 8px solid var(--accent, #D8457A);
-  }
-  .chat-bot-tooltip.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  .chat-window {
-    position: fixed;
-    bottom: 100px;
-    right: 25px;
-    width: 380px;
-    height: 520px;
-    background: #fff;
-    border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
-    display: none;
-    flex-direction: column;
-    overflow: hidden;
-    z-index: 9998;
-    animation: chatSlideUp 0.3s ease;
-  }
-  .chat-bot-icon:hover {
-    transform: scale(1.1);
-  }
-  @keyframes chatSlideUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  .chat-header {
-    background: linear-gradient(135deg, #4A86C1, #f06292);
-    color: #fff;
-    padding: 16px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .chat-header h4 {
-    margin: 0;
-    font-size: 1.1em;
-    font-weight: 600;
-  }
-  .chat-close {
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 24px;
-    cursor: pointer;
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transition: background 0.2s;
-  }
-  .chat-close:hover {
-    background: rgba(255,255,255,0.2);
-  }
-  .chat-body {
-    flex: 1;
-    overflow-y: auto;
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    background: #f8f9fa;
-  }
-  .chat-body::-webkit-scrollbar {
-    width: 6px;
-  }
-  .chat-body::-webkit-scrollbar-thumb {
-    background: #ddd;
-    border-radius: 3px;
-  }
-  .message {
-    max-width: 85%;
-    padding: 12px 16px;
-    border-radius: 16px;
-    font-size: 14px;
-    line-height: 1.5;
-    white-space: pre-line;
-    animation: msgSlideIn 0.25s ease;
-  }
-  @keyframes msgSlideIn {
-    from { opacity: 0; transform: translateY(8px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  .message.bot {
-    background: #fff;
-    color: #333;
-    align-self: flex-start;
-    border-bottom-left-radius: 4px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  }
-  .message.user {
-    background: linear-gradient(135deg, #4A86C1, #A8D5A2);
-    color: #fff;
-    align-self: flex-end;
-    border-bottom-right-radius: 4px;
-  }
-  .message .msg-time {
-    font-size: 10px;
-    opacity: 0.6;
-    margin-top: 4px;
-    text-align: right;
-  }
-  .chat-footer {
-    padding: 12px 16px;
-    background: #fff;
-    border-top: 1px solid #eee;
-    display: flex;
-    gap: 8px;
-  }
-  .chat-input {
-    flex: 1;
-    border: 2px solid #e0e0e0;
-    border-radius: 24px;
-    padding: 10px 16px;
-    outline: none;
-    font-size: 14px;
-    transition: border-color 0.2s;
-  }
-  .chat-input:focus {
-    border-color: #4A86C1;
-  }
-  .chat-send {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: none;
-    background: linear-gradient(135deg, #4A86C1, #f06292);
-    color: #fff;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    transition: transform 0.2s;
-  }
-  .chat-send:hover {
-    transform: scale(1.1);
-  }
-  .typing-indicator {
-    display: none;
-    align-self: flex-start;
-    padding: 12px 16px;
-    background: #fff;
-    border-radius: 16px;
-    border-bottom-left-radius: 4px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  }
-  .typing-indicator span {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    background: #ccc;
-    border-radius: 50%;
-    margin: 0 2px;
-    animation: typingBounce 1.4s infinite ease-in-out both;
-  }
-  .typing-indicator span:nth-child(1) { animation-delay: -0.32s; }
-  .typing-indicator span:nth-child(2) { animation-delay: -0.16s; }
-  @keyframes typingBounce {
-    0%, 80%, 100% { transform: scale(0); }
-    40% { transform: scale(1); }
-  }
-
-  @media (max-width: 480px) {
-    .chat-window {
-      width: calc(100vw - 20px);
-      height: 70vh;
-      right: 10px;
-      bottom: 85px;
-    }
-    .chat-bot-icon {
-      width: 55px;
-      height: 55px;
-      font-size: 24px;
-    }
-  }
-
-        .direction-hero { position: relative; height: 400px; display: flex; align-items: center; justify-content: center; text-align: center; color: white; overflow: hidden; }
-        .direction-hero .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; }
-        .direction-hero .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-        .direction-hero-content { position: relative; z-index: 2; padding: 40px; }
-        .direction-hero h1 { font-size: 48px; font-weight: 800; margin-bottom: 15px; }
-        .direction-hero p { font-size: 20px; opacity: 0.9; }
-        .direction-content { padding: 60px 0; }
-        .direction-content h2 { color: var(--primary); font-size: 28px; margin-bottom: 20px; }
-        .direction-content p { color: var(--text-light); line-height: 1.8; margin-bottom: 20px; font-size: 16px; }
-        .direction-services { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; margin-top: 30px; }
-        .direction-service-card { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); transition: all 0.3s; }
-        .direction-service-card:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0,0,0,0.12); }
-        .direction-service-card i { font-size: 36px; margin-bottom: 15px; display: block; }
-        .direction-service-card h4 { color: var(--text); font-size: 18px; margin-bottom: 10px; }
-        .direction-service-card p { color: var(--text-light); font-size: 14px; line-height: 1.6; margin-bottom: 10px; }
-        .direction-service-card .price { color: var(--accent); font-weight: 700; font-size: 18px; }
-        .breadcrumb { padding: 20px 0; color: var(--text-light); font-size: 14px; }
-        .breadcrumb a { color: var(--primary); text-decoration: none; }
-
-</style>`;
-
 // ====== Инициализация чат-бота ======
 function initChatBot() {
-  // Добавляем стили
-  document.head.insertAdjacentHTML('beforeend', botStyles);
-
-  // Создаём DOM элементы
   const botHTML = `
     <div class="chat-bot-tooltip" id="chatBotTooltip">Готов помочь с вашими вопросами</div>
     <div class="chat-bot-icon" id="chatBotIcon" onclick="toggleChat()" style="display:none;">
@@ -1374,9 +953,6 @@ if (document.readyState === 'loading') {
 }
 
 // ====== Экспорт для использования в других модулях ======
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { getBotResponse, getMultiResponse, detectCategory, BOT_RESPONSES };
-}
 
 
 
@@ -1391,14 +967,6 @@ document.querySelectorAll('input[name="medications"]').forEach(function(el) {
     document.getElementById('medsDetailsField').style.display = this.value === 'yes' ? 'block' : 'none';
   });
 });
-
-function goHome() {
-  if (window.parent !== window) {
-    window.parent.postMessage('goHome', '*');
-  } else {
-    window.location.href = '/';
-  }
-}
 
 
 // Show chat bot after 10 seconds with tooltip
