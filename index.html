@@ -2253,7 +2253,7 @@ function handleSubmit(e) {
                    form.id === 'nevrologForm' ? 'Анкета для невролога' : 'Анкета';
 
   const params = {};
-  params['email'] = 'vovec853@gmail.com';
+  params['email'] = 'Admin@mommed.ru';
   params['Тип анкеты'] = formType;
 
   // Build a formatted message with all data
@@ -2319,7 +2319,7 @@ function handleSubmit(e) {
   }
 
   // Ensure recipient email is never overwritten by the form's email field
-  params['email'] = 'vovec853@gmail.com';
+  params['email'] = 'Admin@mommed.ru';
 
   params['message'] = messageLines.join('\n');
   params['subject'] = 'Новая анкета с сайта MOM — ' + formType;
