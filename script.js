@@ -110,7 +110,7 @@
                 </div>
               </div>
               <div class="doctor-modal-footer">
-                <a href="https://booking.medflex.ru/?user=9d07f51dcdac17646e01a3bdfc52a159" target="_blank" class="btn btn-primary">Записаться</a>
+                <a href="https://prodoctorov.ru/kursk/lpu/84476-mom/price/?page=1#tab-content" target="_blank" class="btn btn-primary">Записаться</a>
               </div>
             </div>
           </div>
@@ -347,7 +347,7 @@ const BOT_RESPONSES = {
 • Денисова А.Д. — педиатр, врач-эндокринолог
 • Юшкова А.Г. — педиатр
 
-<a href="https://booking.medflex.ru/?user=9d07f51dcdac17646e01a3bdfc52a159" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться к педиатру</a>`
+<a href="https://prodoctorov.ru/kursk/lpu/84476-mom/price/?page=1#tab-content" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться к педиатру</a>`
   },
 
   // 2. Невролог
@@ -365,7 +365,7 @@ const BOT_RESPONSES = {
 • Гипертонус/гипотонус мышц
 • Нарушения сна и поведения
 
-<a href="https://booking.medflex.ru/?user=9d07f51dcdac17646e01a3bdfc52a159" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться к неврологу</a>`
+<a href="https://prodoctorov.ru/kursk/lpu/84476-mom/price/?page=1#tab-content" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться к неврологу</a>`
   },
 
   // 3. Хирург-ортопед
@@ -383,7 +383,7 @@ const BOT_RESPONSES = {
 • Массаж и ЛФК
 • УЗИ тазобедренных суставов
 
-<a href="https://booking.medflex.ru/?user=9d07f51dcdac17646e01a3bdfc52a159" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться к ортопеду</a>`
+<a href="https://prodoctorov.ru/kursk/lpu/84476-mom/price/?page=1#tab-content" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться к ортопеду</a>`
   },
 
   // 4. Логопед
@@ -401,7 +401,7 @@ const BOT_RESPONSES = {
 • Нарушения звукопроизношения
 • Логопедический массаж
 
-<a href="https://booking.medflex.ru/?user=9d07f51dcdac17646e01a3bdfc52a159" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться к логопеду</a>`
+<a href="https://prodoctorov.ru/kursk/lpu/84476-mom/price/?page=1#tab-content" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться к логопеду</a>`
   },
 
   // 5. Психолог
@@ -421,7 +421,7 @@ const BOT_RESPONSES = {
 
 Ведёт приём: Блюм А.И. — клинический психолог
 
-<a href="https://booking.medflex.ru/?user=9d07f51dcdac17646e01a3bdfc52a159" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться к психологу</a>`
+<a href="https://prodoctorov.ru/kursk/lpu/84476-mom/price/?page=1#tab-content" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться к психологу</a>`
   },
 
   // 6. Гинеколог
@@ -436,7 +436,7 @@ const BOT_RESPONSES = {
 • Диагностика и лечение гинекологических заболеваний
 • Подростковая гинекология
 
-<a href="https://booking.medflex.ru/?user=9d07f51dcdac17646e01a3bdfc52a159" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться к гинекологу</a>`
+<a href="https://prodoctorov.ru/kursk/lpu/84476-mom/price/?page=1#tab-content" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться к гинекологу</a>`
   },
 
   // 7. Эндокринолог
@@ -455,7 +455,7 @@ const BOT_RESPONSES = {
 
 Ведёт приём: Денисова А.Д. — педиатр, врач-эндокринолог
 
-<a href="https://booking.medflex.ru/?user=9d07f51dcdac17646e01a3bdfc52a159" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться к эндокринологу</a>`
+<a href="https://prodoctorov.ru/kursk/lpu/84476-mom/price/?page=1#tab-content" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться к эндокринологу</a>`
   },
 
   // 8. Нейропсихолог
@@ -475,7 +475,7 @@ const BOT_RESPONSES = {
 
 Ведёт приём: Блюм А.И. — клинический психолог
 
-<a href="https://booking.medflex.ru/?user=9d07f51dcdac17646e01a3bdfc52a159" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться к нейропсихологу</a>`
+<a href="https://prodoctorov.ru/kursk/lpu/84476-mom/price/?page=1#tab-content" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться к нейропсихологу</a>`
   },
 
   // 9. Массаж
@@ -497,7 +497,7 @@ const BOT_RESPONSES = {
 — Гипертонусе/гипотонусе мышц
 — После перенесённых травм и операций
 
-<a href="https://booking.medflex.ru/?user=9d07f51dcdac17646e01a3bdfc52a159" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться на массаж</a>`
+<a href="https://prodoctorov.ru/kursk/lpu/84476-mom/price/?page=1#tab-content" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться на массаж</a>`
   },
 
   // 10. Войта-терапия
@@ -514,7 +514,7 @@ const BOT_RESPONSES = {
 • Гипертонус/гипотонус мышц
 • Нарушения походки
 
-<a href="https://booking.medflex.ru/?user=9d07f51dcdac17646e01a3bdfc52a159" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться на Войта-терапию</a>`
+<a href="https://prodoctorov.ru/kursk/lpu/84476-mom/price/?page=1#tab-content" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться на Войта-терапию</a>`
   },
 
   // 11. Бобат-терапия
@@ -531,7 +531,7 @@ const BOT_RESPONSES = {
 • Гипертонус/гипотонус мышц
 • Нарушения походки и равновесия
 
-<a href="https://booking.medflex.ru/?user=9d07f51dcdac17646e01a3bdfc52a159" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться на Бобат-терапию</a>`
+<a href="https://prodoctorov.ru/kursk/lpu/84476-mom/price/?page=1#tab-content" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться на Бобат-терапию</a>`
   },
 
   // 12. Иппотерапия
@@ -549,7 +549,7 @@ const BOT_RESPONSES = {
 • СДВГ (гиперактивность)
 • Нарушения равновесия и координации
 
-<a href="https://booking.medflex.ru/?user=9d07f51dcdac17646e01a3bdfc52a159" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться на иппотерапию</a>`
+<a href="https://prodoctorov.ru/kursk/lpu/84476-mom/price/?page=1#tab-content" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться на иппотерапию</a>`
   },
 
   // 13. УЗИ
@@ -571,7 +571,7 @@ const BOT_RESPONSES = {
 • Петровская Н.Ю. — детский врач УЗИ
 • Казанова М.В. — врач УЗИ
 
-<a href="https://booking.medflex.ru/?user=9d07f51dcdac17646e01a3bdfc52a159" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться на УЗИ</a>`
+<a href="https://prodoctorov.ru/kursk/lpu/84476-mom/price/?page=1#tab-content" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться на УЗИ</a>`
   },
 
   // 14. Физиотерапия
@@ -592,7 +592,7 @@ const BOT_RESPONSES = {
 — Коррекционная гимнастика
 — Домашние рекомендации для родителей
 
-<a href="https://booking.medflex.ru/?user=9d07f51dcdac17646e01a3bdfc52a159" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться на ЛФК</a>`
+<a href="https://prodoctorov.ru/kursk/lpu/84476-mom/price/?page=1#tab-content" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться на ЛФК</a>`
   },
 
   // 15. Терапия
@@ -607,7 +607,7 @@ const BOT_RESPONSES = {
 • Профилактические осмотры
 • Направления к узким специалистам
 
-<a href="https://booking.medflex.ru/?user=9d07f51dcdac17646e01a3bdfc52a159" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться к терапевту</a>`
+<a href="https://prodoctorov.ru/kursk/lpu/84476-mom/price/?page=1#tab-content" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться к терапевту</a>`
   },
 
   // 16. Врачи (общий запрос)
@@ -657,7 +657,7 @@ const BOT_RESPONSES = {
 Режим работы: ежедневно с 9:00 до 21:00
 Адрес: г. Курск, ул. Л. Толстого, д. 21, пом III
 
-<a href="https://booking.medflex.ru/?user=9d07f51dcdac17646e01a3bdfc52a159" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться на приём</a>`
+<a href="https://prodoctorov.ru/kursk/lpu/84476-mom/price/?page=1#tab-content" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться на приём</a>`
   },
 
   // 19. Запись / Записаться
@@ -674,7 +674,7 @@ const BOT_RESPONSES = {
 
 Работаем ежедневно с 9:00 до 21:00.
 
-<a href="https://booking.medflex.ru/?user=9d07f51dcdac17646e01a3bdfc52a159" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться на приём</a>`
+<a href="https://prodoctorov.ru/kursk/lpu/84476-mom/price/?page=1#tab-content" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться на приём</a>`
   },
 
   // 20. Цены / Стоимость
@@ -695,7 +695,7 @@ const BOT_RESPONSES = {
 
 Подробный прайс-лист смотрите в разделе «Услуги и цены».
 
-<a href="https://booking.medflex.ru/?user=9d07f51dcdac17646e01a3bdfc52a159" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться на приём</a>`
+<a href="https://prodoctorov.ru/kursk/lpu/84476-mom/price/?page=1#tab-content" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться на приём</a>`
   },
 
   // 21. Время работы
@@ -763,7 +763,7 @@ const BOT_RESPONSES = {
 • Консультация по вакцинации
 • Составление индивидуального календаря
 
-<a href="https://booking.medflex.ru/?user=9d07f51dcdac17646e01a3bdfc52a159" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться к педиатру</a>`
+<a href="https://prodoctorov.ru/kursk/lpu/84476-mom/price/?page=1#tab-content" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться к педиатру</a>`
   },
 
   // 26. Анкеты / Формы
@@ -829,7 +829,7 @@ function detectCategory(userMessage) {
 
 // ====== Кнопка записи ======
 const BOOKING_BTN = `
-<a href="https://booking.medflex.ru/?user=9d07f51dcdac17646e01a3bdfc52a159" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться на приём</a>`;
+<a href="https://prodoctorov.ru/kursk/lpu/84476-mom/price/?page=1#tab-content" target="_blank" style="display:inline-block;padding:10px 20px;background:linear-gradient(135deg, #4A86C1, #f06292);color:white;border-radius:20px;text-decoration:none;font-weight:600;margin-top:10px;">📅 Записаться на приём</a>`;
 
 function addBookingButton(response, category) {
   if (category === 'greeting' || category === 'goodbye' || category === 'address' || category === 'doctors' || category === 'reviews' || category === 'articles' || category === 'library' || category === 'hours' || category === 'anketa') return response;
