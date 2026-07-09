@@ -2254,6 +2254,7 @@ function handleSubmit(e) {
 
   const params = {};
   params['email'] = 'vovec853@gmail.com';
+  params['Тип анкеты'] = formType;
 
   // Build a formatted message with all data
   let messageLines = [];
@@ -2305,13 +2306,15 @@ function handleSubmit(e) {
   for (const key in data) {
     if (key === 'consent') continue;
     const label = labelMap[key] || key;
-    let value = data[key];
-    if (valueMap[key] && valueMap[key][value]) {
-      value = valueMap[key][value];
+    let rawValue = data[key];
+    let displayValue = rawValue;
+    if (valueMap[key] && valueMap[key][rawValue]) {
+      displayValue = valueMap[key][rawValue];
     }
-    if (value && String(value).trim() !== '') {
-      params[key] = String(value).trim();
-      messageLines.push(label + ': ' + value);
+    if (rawValue && String(rawValue).trim() !== '') {
+      // Send Russian translated value in params so template shows Russian
+      params[key] = String(displayValue).trim();
+      messageLines.push(label + ': ' + displayValue);
     }
   }
 
@@ -2319,6 +2322,31 @@ function handleSubmit(e) {
   params['subject'] = 'Новая анкета с сайта MOM — ' + formType;
 
   // Send via EmailJS
+  if (typeof emailjs !== 'undefined') {
+    emailjs.send('service_d7ajzly', 'template_cgiqpvr', params)
+      .then(function(response) {
+        console.log('Email sent via EmailJS:', response);
+        showFormSuccess(form);
+      }, function(error) {
+        console.error('EmailJS error:', error);
+        showFormError(form, 'Ошибка отправки. Пожалуйста, попробуйте позже или позвоните нам.');
+      })
+      .finally(function() {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
+        }
+      });
+  } else {
+    console.error('EmailJS not loaded');
+    showFormError(form, 'EmailJS не загружен. Пожалуйста, обновите страницу.');
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalText;
+    }
+  }
+}
+// Send via EmailJS
   if (typeof emailjs !== 'undefined') {
     emailjs.send('service_d7ajzly', 'template_cgiqpvr', params)
       .then(function(response) {
