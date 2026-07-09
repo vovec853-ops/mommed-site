@@ -30,7 +30,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <link rel="stylesheet" href="style.css?v=16">
+    <link rel="stylesheet" href="style.css?v=17">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -2227,6 +2227,14 @@
 </div>
 
 </script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+(function() {
+  if (typeof emailjs !== 'undefined') {
+    emailjs.init({ publicKey: '0MLhnyQeRI1-Dx1CF' });
+  }
+})();
+</script>
 <script>
 function handleSubmit(e) {
   e.preventDefault();
@@ -2374,30 +2382,30 @@ function handleSubmit(e) {
     params['Сообщение'] = message;
   }
 
-  // Send via FormSubmit.co
-  fetch('https://formsubmit.co/ajax/vovec853@gmail.com', {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
-    body: JSON.stringify(params)
-  })
-    .then(function(response) {
-      if (response.ok) {
-        console.log('Email sent via FormSubmit.co');
+  // Send via EmailJS (browser-side, always works)
+  if (typeof emailjs !== 'undefined') {
+    emailjs.send('service_d7ajzly', 'template_cgiqpvr', params)
+      .then(function(response) {
+        console.log('Email sent via EmailJS:', response);
         showFormSuccess(form);
-      } else {
-        return response.text().then(function(text) { throw new Error(text || 'Server error'); });
-      }
-    })
-    .catch(function(error) {
-      console.error('Email error:', error);
-      showFormError(form, 'Ошибка отправки. Пожалуйста, попробуйте позже или позвоните нам.');
-    })
-    .finally(function() {
-      if (submitBtn) {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = originalText;
-      }
-    });
+      }, function(error) {
+        console.error('EmailJS error:', error);
+        showFormError(form, 'Ошибка отправки. Пожалуйста, попробуйте позже или позвоните нам.');
+      })
+      .finally(function() {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
+        }
+      });
+  } else {
+    console.error('EmailJS not loaded');
+    showFormError(form, 'EmailJS не загружен. Пожалуйста, обновите страницу.');
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalText;
+    }
+  }
 }
 
 function showFormSuccess(form) {
@@ -2425,7 +2433,7 @@ function showFormError(form, message) {
   }, 5000);
 }
     </script>
-    <script src="script.js?v=16"></script>
+    <script src="script.js?v=17"></script>
 
 <!-- Cookie Consent Banner -->
 
