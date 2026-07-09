@@ -2252,138 +2252,98 @@ function handleSubmit(e) {
   const formType = form.id === 'pediatrForm' ? 'Анкета для педиатра' :
                    form.id === 'nevrologForm' ? 'Анкета для невролога' : 'Анкета';
 
-  // Helper to add only non-empty values
-  function addField(obj, label, value) {
-    if (value !== undefined && value !== null && String(value).trim() !== '') {
-      obj[label] = String(value).trim();
-    }
-  }
-
-  let messageParts = [];
   const params = {};
   params['email'] = 'vovec853@gmail.com';
 
-  // Common fields
-  addField(params, 'Тип анкеты', formType);
-  addField(params, 'Имя ребенка', data.childName);
-  addField(params, 'Возраст', data.childAge);
-  addField(params, 'Дата рождения', data.birthDate);
-  addField(params, 'Телефон', data.phone);
-  addField(params, 'Email', data.email);
+  // Build a formatted message with all data
+  let messageLines = [];
+  messageLines.push('Тип анкеты: ' + formType);
+  messageLines.push('');
 
-  if (form.id === 'pediatrForm') {
-    if (data.birthWeight) {
-      addField(params, 'Вес при рождении', data.birthWeight + ' кг');
-      messageParts.push('Вес при рождении: ' + data.birthWeight + ' кг');
+  // Map form values to readable labels
+  const labelMap = {
+    childName: 'ФИО ребенка',
+    childAge: 'Возраст',
+    birthDate: 'Дата рождения',
+    phone: 'Телефон',
+    email: 'Email отправителя',
+    birthWeight: 'Вес при рождении',
+    currentWeight: 'Текущий вес',
+    height: 'Рост',
+    feedingType: 'Тип вскармливания',
+    allergies: 'Аллергии',
+    diseases: 'Перенесенные заболевания',
+    vaccines: 'Прививки',
+    currentComplaints: 'Текущие жалобы',
+    complaints: 'Жалобы',
+    pregnancy: 'Беременность',
+    birthComplications: 'Осложнения при родах',
+    birthDetails: 'Детали родов',
+    holdHead: 'Держал голову',
+    sitAge: 'Начал сидеть',
+    crawlAge: 'Начал ползать',
+    walkAge: 'Начал ходить',
+    firstWords: 'Первые слова',
+    seizures: 'Судороги',
+    headTrauma: 'Травмы головы',
+    medications: 'Прием лекарств',
+    medsDetails: 'Лекарства',
+    heredity: 'Наследственность',
+    extraInfo: 'Дополнительная информация'
+  };
+
+  const valueMap = {
+    feedingType: {breast:'Грудное', formula:'Искусственное', mixed:'Смешанное'},
+    vaccines: {yes:'Да, все', no:'Нет', partial:'Частично'},
+    pregnancy: {normal:'Нормально', complicated:'С осложнениями'},
+    birthComplications: {no:'Нет', yes:'Да'},
+    seizures: {yes:'Да', no:'Нет'},
+    headTrauma: {yes:'Да', no:'Нет'},
+    medications: {yes:'Да', no:'Нет'}
+  };
+
+  for (const key in data) {
+    if (key === 'consent') continue;
+    const label = labelMap[key] || key;
+    let value = data[key];
+    if (valueMap[key] && valueMap[key][value]) {
+      value = valueMap[key][value];
     }
-    if (data.currentWeight) {
-      addField(params, 'Текущий вес', data.currentWeight + ' кг');
-      messageParts.push('Текущий вес: ' + data.currentWeight + ' кг');
-    }
-    if (data.height) {
-      addField(params, 'Рост', data.height + ' см');
-      messageParts.push('Рост: ' + data.height + ' см');
-    }
-    if (data.feedingType) {
-      const feedingMap = {breast:'Грудное', formula:'Искусственное', mixed:'Смешанное'};
-      const feedingText = feedingMap[data.feedingType] || data.feedingType;
-      addField(params, 'Тип вскармливания', feedingText);
-      messageParts.push('Тип вскармливания: ' + feedingText);
-    }
-    if (data.allergies) {
-      addField(params, 'Аллергии', data.allergies);
-      messageParts.push('Аллергии: ' + data.allergies);
-    }
-    if (data.diseases) {
-      addField(params, 'Перенесенные заболевания', data.diseases);
-      messageParts.push('Перенесенные заболевания: ' + data.diseases);
-    }
-    if (data.vaccines) {
-      const vaccinesMap = {yes:'Да, все', no:'Нет', partial:'Частично'};
-      const vaccinesText = vaccinesMap[data.vaccines] || data.vaccines;
-      addField(params, 'Прививки', vaccinesText);
-      messageParts.push('Прививки: ' + vaccinesText);
-    }
-    if (data.currentComplaints) {
-      addField(params, 'Текущие жалобы', data.currentComplaints);
-      messageParts.push('Текущие жалобы: ' + data.currentComplaints);
-    }
-  } else if (form.id === 'nevrologForm') {
-    if (data.complaints) {
-      addField(params, 'Жалобы', data.complaints);
-      messageParts.push('Жалобы: ' + data.complaints);
-    }
-    if (data.pregnancy) {
-      const pregnancyMap = {normal:'Нормально', complicated:'С осложнениями'};
-      const pregnancyText = pregnancyMap[data.pregnancy] || data.pregnancy;
-      addField(params, 'Беременность', pregnancyText);
-      messageParts.push('Беременность: ' + pregnancyText);
-    }
-    if (data.birthComplications) {
-      const bcMap = {no:'Нет', yes:'Да'};
-      const bcText = bcMap[data.birthComplications] || data.birthComplications;
-      addField(params, 'Осложнения при родах', bcText);
-      messageParts.push('Осложнения при родах: ' + bcText);
-      if (data.birthDetails) {
-        addField(params, 'Детали родов', data.birthDetails);
-        messageParts.push('Детали родов: ' + data.birthDetails);
-      }
-    }
-    if (data.holdHead) {
-      addField(params, 'Держал голову', data.holdHead);
-      messageParts.push('Держал голову: ' + data.holdHead);
-    }
-    if (data.sitAge) {
-      addField(params, 'Начал сидеть', data.sitAge);
-      messageParts.push('Начал сидеть: ' + data.sitAge);
-    }
-    if (data.crawlAge) {
-      addField(params, 'Начал ползать', data.crawlAge);
-      messageParts.push('Начал ползать: ' + data.crawlAge);
-    }
-    if (data.walkAge) {
-      addField(params, 'Начал ходить', data.walkAge);
-      messageParts.push('Начал ходить: ' + data.walkAge);
-    }
-    if (data.firstWords) {
-      addField(params, 'Первые слова', data.firstWords);
-      messageParts.push('Первые слова: ' + data.firstWords);
-    }
-    if (data.seizures) {
-      const seizuresText = data.seizures === 'yes' ? 'Да' : 'Нет';
-      addField(params, 'Судороги', seizuresText);
-      messageParts.push('Судороги: ' + seizuresText);
-    }
-    if (data.headTrauma) {
-      const htText = data.headTrauma === 'yes' ? 'Да' : 'Нет';
-      addField(params, 'Травмы головы', htText);
-      messageParts.push('Травмы головы: ' + htText);
-    }
-    if (data.medications) {
-      const medsText = data.medications === 'yes' ? 'Да' : 'Нет';
-      addField(params, 'Прием лекарств', medsText);
-      messageParts.push('Прием лекарств: ' + medsText);
-      if (data.medsDetails) {
-        addField(params, 'Лекарства', data.medsDetails);
-        messageParts.push('Лекарства: ' + data.medsDetails);
-      }
-    }
-    if (data.heredity) {
-      addField(params, 'Наследственность', data.heredity);
-      messageParts.push('Наследственность: ' + data.heredity);
-    }
-    if (data.extraInfo) {
-      addField(params, 'Дополнительная информация', data.extraInfo);
-      messageParts.push('Дополнительная информация: ' + data.extraInfo);
+    if (value && String(value).trim() !== '') {
+      params[key] = String(value).trim();
+      messageLines.push(label + ': ' + value);
     }
   }
 
-  const message = messageParts.join('\n');
-  if (message) {
-    params['Сообщение'] = message;
-  }
+  params['message'] = messageLines.join('\n');
+  params['subject'] = 'Новая анкета с сайта MOM — ' + formType;
 
-  // Send via EmailJS (browser-side, always works)
+  // Send via EmailJS
+  if (typeof emailjs !== 'undefined') {
+    emailjs.send('service_d7ajzly', 'template_cgiqpvr', params)
+      .then(function(response) {
+        console.log('Email sent via EmailJS:', response);
+        showFormSuccess(form);
+      }, function(error) {
+        console.error('EmailJS error:', error);
+        showFormError(form, 'Ошибка отправки. Пожалуйста, попробуйте позже или позвоните нам.');
+      })
+      .finally(function() {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
+        }
+      });
+  } else {
+    console.error('EmailJS not loaded');
+    showFormError(form, 'EmailJS не загружен. Пожалуйста, обновите страницу.');
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalText;
+    }
+  }
+}
+// Send via EmailJS (browser-side, always works)
   if (typeof emailjs !== 'undefined') {
     emailjs.send('service_d7ajzly', 'template_cgiqpvr', params)
       .then(function(response) {
