@@ -2346,56 +2346,6 @@ function handleSubmit(e) {
     }
   }
 }
-// Send via EmailJS
-  if (typeof emailjs !== 'undefined') {
-    emailjs.send('service_d7ajzly', 'template_cgiqpvr', params)
-      .then(function(response) {
-        console.log('Email sent via EmailJS:', response);
-        showFormSuccess(form);
-      }, function(error) {
-        console.error('EmailJS error:', error);
-        showFormError(form, 'Ошибка отправки. Пожалуйста, попробуйте позже или позвоните нам.');
-      })
-      .finally(function() {
-        if (submitBtn) {
-          submitBtn.disabled = false;
-          submitBtn.innerHTML = originalText;
-        }
-      });
-  } else {
-    console.error('EmailJS not loaded');
-    showFormError(form, 'EmailJS не загружен. Пожалуйста, обновите страницу.');
-    if (submitBtn) {
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = originalText;
-    }
-  }
-}
-// Send via EmailJS (browser-side, always works)
-  if (typeof emailjs !== 'undefined') {
-    emailjs.send('service_d7ajzly', 'template_cgiqpvr', params)
-      .then(function(response) {
-        console.log('Email sent via EmailJS:', response);
-        showFormSuccess(form);
-      }, function(error) {
-        console.error('EmailJS error:', error);
-        showFormError(form, 'Ошибка отправки. Пожалуйста, попробуйте позже или позвоните нам.');
-      })
-      .finally(function() {
-        if (submitBtn) {
-          submitBtn.disabled = false;
-          submitBtn.innerHTML = originalText;
-        }
-      });
-  } else {
-    console.error('EmailJS not loaded');
-    showFormError(form, 'EmailJS не загружен. Пожалуйста, обновите страницу.');
-    if (submitBtn) {
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = originalText;
-    }
-  }
-}
 
 function showFormSuccess(form) {
   const successDiv = document.createElement('div');
